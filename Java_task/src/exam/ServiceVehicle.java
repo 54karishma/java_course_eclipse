@@ -1,9 +1,9 @@
 package exam;
 
-public abstract class ServiceVehicle extends Vehicle{
+public  class ServiceVehicle extends Vehicle implements ServiceOperation{
 
 	public ServiceVehicle(String ownerName, String number, String type) {
-		super(ownerName, number, type);
+		super(ownerName,number,type);
 		System.out.println("vehicle profile created sussfully");
 		
 		
@@ -18,18 +18,13 @@ public abstract class ServiceVehicle extends Vehicle{
     	
     	
     }
+    @Override
     public void displayProfile() {
     	System.out.println("Enter owner Name:" +getownerName());
     	System.out.println("Enter vehicle number:" +getnumber());
-    	System.out.println("Enter vehicle type :"+gettype());
-    	
-    	
-    	
+        System.out.println("Enter vehicle type :"+gettype());
+        
+        
+        
     }
-    
-    
-
-	
-	
-
 }
